@@ -1,0 +1,19 @@
+[toolchain]
+
+[features]
+seeds = false
+skip-lint = false
+
+[programs.devnet]
+wilson_test = "6ihQHqo27aTYC9Y1s6UqbdwUhW2xVFcjy6Grd3WyBAZw"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/home/linux/.config/solana/id.json"
+
+[scripts]
+test = "node tests/wilson-test.js"
+#test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

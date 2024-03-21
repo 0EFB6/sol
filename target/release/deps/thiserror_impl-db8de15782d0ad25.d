@@ -1,0 +1,13 @@
+/home/linux/j/solana/wilson-test/target/release/deps/libthiserror_impl-db8de15782d0ad25.so: /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/lib.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/ast.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/attr.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/expand.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/fmt.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/generics.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/prop.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/span.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/valid.rs
+
+/home/linux/j/solana/wilson-test/target/release/deps/thiserror_impl-db8de15782d0ad25.d: /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/lib.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/ast.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/attr.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/expand.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/fmt.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/generics.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/prop.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/span.rs /home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/valid.rs
+
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/lib.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/ast.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/attr.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/expand.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/fmt.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/generics.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/prop.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/span.rs:
+/home/linux/.cargo/registry/src/github.com-1ecc6299db9ec823/thiserror-impl-1.0.58/src/valid.rs:
