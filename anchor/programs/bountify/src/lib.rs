@@ -2,7 +2,7 @@
 
 use anchor_lang::prelude::*;
 
-declare_id!("2idZ51svR36LuF5WNcZEvCUSP3cz4N432rMaTKNxM5Pn");
+declare_id!("46ZHFftat4qgQ9DZaYNCX38mwFJu5UCgdd1xuaF7uck7");
 
 #[program]
 pub mod bountify {

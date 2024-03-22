@@ -1,5 +1,6 @@
 'use client';
 
+import './ui.css'
 import { WalletButton } from '../solana/solana-provider';
 import * as React from 'react';
 import { ReactNode, Suspense, useEffect, useRef } from 'react';
@@ -26,18 +27,18 @@ export function UiLayout({
 
   return (
     <div className="h-full flex flex-col">
-      <div className="navbar bg-base-300 text-neutral-content flex-col md:flex-row space-y-2 md:space-y-0">
+      <div className="navbar bg-yellow-200 text-neutral-content flex-col md:flex-row space-y-2 md:space-y-0">
         <div className="flex-1">
           <Link className="btn btn-ghost normal-case text-xl" href="/">
             <img
               className="h-4 md:h-6"
               alt="Solana Logo"
-              src="/solana-logo.png"
+              src="/logo.png"
             />
           </Link>
           <ul className="menu menu-horizontal px-1 space-x-2">
             {links.map(({ label, path }) => (
-              <li key={path}>
+              <li key={path} className='nav-button'>
                 <Link
                   className={pathname.startsWith(path) ? 'active' : ''}
                   href={path}
@@ -68,9 +69,9 @@ export function UiLayout({
         </Suspense>
         <Toaster position="bottom-right" />
       </div>
-      <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+      <footer className="footer footer-center p-4 text-base-content">
         <aside>
-          <p>
+          <p className="text-black">
             Created by SBCC_Jonx
 		  </p>
 

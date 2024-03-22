@@ -1,5 +1,6 @@
 'use client';
 
+import './cluster.css'
 import { useConnection } from '@solana/wallet-adapter-react';
 import { IconTrash } from '@tabler/icons-react';
 import { useQuery } from '@tanstack/react-query';

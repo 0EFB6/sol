@@ -1,5 +1,7 @@
 'use client';
 
+import './account.css'
+
 import { useWallet } from '@solana/wallet-adapter-react';
 import { LAMPORTS_PER_SOL, PublicKey } from '@solana/web3.js';
 import { IconRefresh } from '@tabler/icons-react';
@@ -130,7 +132,7 @@ export function AccountTokens({ address }: { address: PublicKey }) {
     <div className="space-y-2">
       <div className="justify-between">
         <div className="flex justify-between">
-          <h2 className="text-2xl font-bold">Token Accounts</h2>
+          <h2 className="text-2xl text-black font-bold">Token Accounts</h2>
           <div className="space-x-2">
             {query.isLoading ? (
               <span className="loading loading-spinner"></span>
@@ -232,7 +234,7 @@ export function AccountTransactions({ address }: { address: PublicKey }) {
   return (
     <div className="space-y-2">
       <div className="flex justify-between">
-        <h2 className="text-2xl font-bold">Transaction History</h2>
+        <h2 className="text-2xl text-black font-bold">Transaction History</h2>
         <div className="space-x-2">
           {query.isLoading ? (
             <span className="loading loading-spinner"></span>
@@ -259,10 +261,10 @@ export function AccountTransactions({ address }: { address: PublicKey }) {
             <table className="table border-4 rounded-lg border-separate border-base-300">
               <thead>
                 <tr>
-                  <th>Signature</th>
-                  <th className="text-right">Slot</th>
-                  <th>Block Time</th>
-                  <th className="text-right">Status</th>
+                  <th className="text-black">Signature</th>
+                  <th className="text-right text-black">Slot</th>
+                  <th className="text-black">Block Time</th>
+                  <th className="text-right text-black">Status</th>
                 </tr>
               </thead>
               <tbody>
@@ -363,6 +365,7 @@ function ModalAirdrop({
       submit={() => mutation.mutateAsync(parseFloat(amount)).then(() => hide())}
     >
       <input
+        style={{ textAlign: 'left', paddingRight: '2rem', color: 'brown'}}
         disabled={mutation.isPending}
         type="number"
         step="any"
