@@ -45,6 +45,7 @@ pub struct InitializeBountify<'info> {
   pub bountify: Account<'info, Bountify>,
   pub system_program: Program<'info, System>,
 }
+
 #[derive(Accounts)]
 pub struct CloseBountify<'info> {
   #[account(mut)]
