@@ -68,4 +68,5 @@ pub struct Update<'info> {
 #[derive(InitSpace)]
 pub struct Bountify {
   count: u8,
+  bounty: String::new()
 }

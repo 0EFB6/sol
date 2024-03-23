@@ -4,22 +4,82 @@ import { Keypair, PublicKey } from '@solana/web3.js';
 import { useMemo } from 'react';
 import { ellipsify } from '../ui/ui-layout';
 import { ExplorerLink } from '../cluster/cluster-ui';
+import { useCluster } from '../cluster/cluster-data-access';
+import { AppModal } from '../ui/ui-layout';
+import { useState } from 'react';
 import {
   useBountifyProgram,
   useBountifyProgramAccount,
 } from './bountify-data-access';
 
+// import { ModalPost } from './bountify-post';
+
+function ModalPost({
+	hide,
+	show,
+	// address,
+  }: {
+	hide: () => void;
+	show: boolean;
+	// address: PublicKey;
+  }) {
+	// const mutation = useRequestAirdrop({ address });
+	const [amount, setAmount] = useState('2');
+  
+	return (
+	  <AppModal
+		hide={hide}
+		show={show}
+		title="Create Job Post"
+		// submitDisabled={!amount || mutation.isPending}
+		submitLabel="Post Job"
+		// submit={() => mutation.mutateAsync(parseFloat(amount)).then(() => hide())}
+	  >
+		<input
+		  style={{ textAlign: 'left', paddingRight: '2rem', color: 'brown'}}
+		//   disabled={mutation.isPending}
+		  type="number"
+		  step="any"
+		  min="1"
+		  placeholder="Amount"
+		  className="input input-bordered w-full"
+		  value={amount}
+		  onChange={(e) => setAmount(e.target.value)}
+		/>
+	  </AppModal>
+	);
+  }
+
 export function BountifyCreate() {
   const { initialize } = useBountifyProgram();
+  const { cluster } = useCluster();
+  const [showPostModal, setShowPostModal] = useState(false);
 
   return (
-    <button
-      className="btn btn-xs lg:btn-md btn-primary"
-      onClick={() => initialize.mutateAsync(Keypair.generate())}
-      disabled={initialize.isPending}
-    >
-      Create {initialize.isPending && '...'}
-    </button>
+	<div className="space-x-2">
+		<button
+		className="btn btn-xs lg:btn-md btn-primary"
+		onClick={() => initialize.mutateAsync(Keypair.generate())}
+		disabled={initialize.isPending}
+		>
+		Create {initialize.isPending && '...'}
+		</button>
+
+		<ModalPost
+			hide={() => setShowPostModal(false)}
+			// address={address}
+			show={showPostModal}
+      	/>
+		<button
+          disabled={cluster.network?.includes('mainnet')}
+          className="btn btn-xs lg:btn-md btn-outline"
+          onClick={() => setShowPostModal(true)}
+        >
+          Create Job Post
+        </button>
+
+	</div>
+
   );
 }
 
