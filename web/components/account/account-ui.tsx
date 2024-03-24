@@ -75,6 +75,7 @@ export function AccountButtons({ address }: { address: PublicKey }) {
   const [showAirdropModal, setShowAirdropModal] = useState(false);
   const [showReceiveModal, setShowReceiveModal] = useState(false);
   const [showSendModal, setShowSendModal] = useState(false);
+  const [showTestModal, setShowTestModal] = useState(false);
 
   return (
     <div>
@@ -92,6 +93,11 @@ export function AccountButtons({ address }: { address: PublicKey }) {
         address={address}
         show={showSendModal}
         hide={() => setShowSendModal(false)}
+      />
+      <ModalTest
+        address={address}
+        show={showTestModal}
+        hide={() => setShowTestModal(false)}
       />
       <div className="space-x-2">
         <button
@@ -113,6 +119,12 @@ export function AccountButtons({ address }: { address: PublicKey }) {
           onClick={() => setShowReceiveModal(true)}
         >
           Receive
+        </button>
+        <button
+          className="btn btn-xs lg:btn-md btn-outline"
+          onClick={() => setShowTestModal(true)}
+        >
+          Claim
         </button>
       </div>
     </div>
@@ -371,6 +383,42 @@ function ModalAirdrop({
         step="any"
         min="1"
         placeholder="Amount"
+        className="input input-bordered w-full"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+      />
+    </AppModal>
+  );
+}
+
+function ModalTest({
+  hide,
+  show,
+  address,
+}: {
+  hide: () => void;
+  show: boolean;
+  address: PublicKey;
+}) {
+  const mutation = useRequestAirdrop({ address });
+  const [amount, setAmount] = useState('1');
+
+  return (
+    <AppModal
+      hide={hide}
+      show={show}
+      title="Claim Bounty"
+      submitDisabled={!amount || mutation.isPending}
+      submitLabel="Claim"
+      submit={() => mutation.mutateAsync(parseFloat(amount)).then(() => hide())}
+    >
+      <input
+        style={{ textAlign: 'left', paddingRight: '2rem', color: 'brown'}}
+        disabled={mutation.isPending}
+        type="number"
+        step="any"
+        min="1"
+        placeholder="Bounty Rewarded"
         className="input input-bordered w-full"
         value={amount}
         onChange={(e) => setAmount(e.target.value)}

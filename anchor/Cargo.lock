@@ -516,6 +516,7 @@ name = "bountify"
 version = "0.1.0"
 dependencies = [
  "anchor-lang",
+ "solana-program",
 ]
 
 [[package]]
@@ -1412,9 +1413,9 @@ checksum = "e6ecd384b10a64542d77071bd64bd7b231f4ed5940fba55e98c3de13824cf3d7"
 
 [[package]]
 name = "solana-frozen-abi"
-version = "1.18.3"
+version = "1.18.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6b502de106324a6feecf2abedab8ab8cb16c180b3797d16579c4206bb5550176"
+checksum = "033e98b727d281cc22381ff703f58b70822b8c32ddb7aca9e7eb3a9c1d465371"
 dependencies = [
  "block-buffer 0.10.4",
  "bs58 0.4.0",
@@ -1437,9 +1438,9 @@ dependencies = [
 
 [[package]]
 name = "solana-frozen-abi-macro"
-version = "1.18.3"
+version = "1.18.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ade5285dc4d89b156de13ad308239fdda7bb0ff4eaeb1de6cd289520a9418a3b"
+checksum = "aab7183079f7a0c0b71454fd365e12bce9a773b8099f6c2a92ba6887c42a9d0f"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1449,9 +1450,9 @@ dependencies = [
 
 [[package]]
 name = "solana-program"
-version = "1.18.3"
+version = "1.18.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d8f5554522403aa27017aafb452adc63a37429d83f6e44a16b2c50fbb528688"
+checksum = "0af84e0c085510c9d1660d1f7e50e8b94ec97f27e23e13d960db353d98b55c8a"
 dependencies = [
  "ark-bn254",
  "ark-ec",
@@ -1504,9 +1505,9 @@ dependencies = [
 
 [[package]]
 name = "solana-sdk-macro"
-version = "1.18.3"
+version = "1.18.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "19298eac5bb77a1f0ffff810dca03c32d92ae9013d1ad4e50dc32b01b74b3a4d"
+checksum = "5cff24eec74815028ebcffe639cf63ff50fb78dadcbf71a8b95b44e7ad1bb6b2"
 dependencies = [
  "bs58 0.4.0",
  "proc-macro2",

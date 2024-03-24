@@ -8,7 +8,7 @@ export { Bountify, BountifyIDL };
 
 // After updating your program ID (e.g. after running `anchor keys sync`) update the value below.
 export const BOUNTIFY_PROGRAM_ID = new PublicKey(
-  'GV82BHGtQ3UaantPYTWkD3i4rVuerkHyDwq6rMKXURMC'
+  '46ZHFftat4qgQ9DZaYNCX38mwFJu5UCgdd1xuaF7uck7'
 );
 
 // This is a helper function to get the program ID for the Bountify program depending on the cluster.

@@ -129,6 +129,7 @@ function BountifyCard({ account }: { account: PublicKey }) {
     setMutation,
     decrementMutation,
     closeMutation,
+    claimMutation,
   } = useBountifyProgramAccount({ account });
 
   const count = useMemo(

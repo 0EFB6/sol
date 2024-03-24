@@ -76,6 +76,41 @@ export type Bountify = {
           "type": "u8"
         }
       ]
+    },
+    {
+      "name": "receivecash",
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true,
+          "docs": [
+            "The user account receiving SOL tokens. This account must sign the transaction."
+          ]
+        },
+        {
+          "name": "programAccount",
+          "isMut": true,
+          "isSigner": false,
+          "docs": [
+            "The program account representing the source of SOL tokens to be transferred."
+          ]
+        },
+        {
+          "name": "systemProgram",
+          "isMut": true,
+          "isSigner": false,
+          "docs": [
+            "The System program account used for invoking the token transfer instruction."
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
     }
   ],
   "accounts": [
@@ -170,6 +205,41 @@ export const IDL: Bountify = {
         {
           "name": "value",
           "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "receivecash",
+      "accounts": [
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true,
+          "docs": [
+            "The user account receiving SOL tokens. This account must sign the transaction."
+          ]
+        },
+        {
+          "name": "programAccount",
+          "isMut": true,
+          "isSigner": false,
+          "docs": [
+            "The program account representing the source of SOL tokens to be transferred."
+          ]
+        },
+        {
+          "name": "systemProgram",
+          "isMut": true,
+          "isSigner": false,
+          "docs": [
+            "The System program account used for invoking the token transfer instruction."
+          ]
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
         }
       ]
     }
