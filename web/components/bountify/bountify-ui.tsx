@@ -53,7 +53,9 @@ function ModalPost({
 export function BountifyCreate() {
   const { initialize } = useBountifyProgram();
   const { cluster } = useCluster();
-  const [showPostModal, setShowPostModal] = useState(false);
+
+  // DEBUG here
+  console.log('getProgramAccount haha:', Keypair.generate());
 
   return (
 	<div className="space-x-2">
@@ -65,18 +67,19 @@ export function BountifyCreate() {
 		Create {initialize.isPending && '...'}
 		</button>
 
-		<ModalPost
-			hide={() => setShowPostModal(false)}
+		{/* <ModalPost
+			// hide={() => setShowPostModal(false)}
 			// address={address}
-			show={showPostModal}
-      	/>
+			// show={showPostModal}
+      	/> */}
 		<button
           disabled={cluster.network?.includes('mainnet')}
           className="btn btn-xs lg:btn-md btn-outline"
-          onClick={() => setShowPostModal(true)}
+          onClick={() => initialize.mutateAsync(Keypair.generate())}
         >
           Create Job Post
         </button>
+
 
 	</div>
 
@@ -129,7 +132,7 @@ function BountifyCard({ account }: { account: PublicKey }) {
     setMutation,
     decrementMutation,
     closeMutation,
-    claimMutation,
+    // claimMutation,
   } = useBountifyProgramAccount({ account });
 
   const count = useMemo(
